@@ -1,0 +1,100 @@
+/* Import all base styles from portcss.css */
+@import 'portcss.css';
+
+/* Additional styles specific to contact page */
+.contact-section {
+    padding: 120px 0 60px;
+    background-color: #121212;
+}
+
+.contact-form-container {
+    background: #151515;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.form-label {
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.form-control {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: #1a1a1a;
+    border-color: #4c6ef5;
+    box-shadow: 0 0 0 0.25rem rgba(76, 110, 245, 0.25);
+    color: #e0e0e0;
+}
+
+.social-section {
+    padding: 60px 0;
+    background-color: #0a0a0a;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    background: #151515;
+    border-radius: 12px;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(76, 110, 245, 0.2);
+}
+
+.social-link i {
+    font-size: 24px;
+    color: #4c6ef5;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    background: #1a1a1a;
+    border-color: #4c6ef5;
+    color: #4c6ef5;
+    box-shadow: 0 5px 15px rgba(76, 110, 245, 0.2);
+}
+
+/* Form submission animation */
+@keyframes submitPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.btn-primary:active {
+    animation: submitPulse 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 20px;
+    }
+    
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-link {
+        padding: 12px 20px;
+    }
+}
